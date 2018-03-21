@@ -27,5 +27,8 @@ ej:
 Producer producer = new Producer('ipa,house');
 producer.start();
 
-FORMA 3:
+FORMA 3:Pasarle un Runnable al constructor de Thread creando una clase anonima
+*Creamos una instancia de Thread
+*Como parametro le pasamos una instancia de Runnable y el método run de esa instancia creado en ese mismo momento donde hacermos lo que hariamos en el método run del Producer. 
+*luego llamamos al start() del Thread creado.
 
