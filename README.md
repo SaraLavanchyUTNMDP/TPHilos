@@ -2,7 +2,7 @@
 tp1 Hilos en Cervecería.
 
 1-Cuantos consumidores se necesitan para que el stock llegue a 0?
-rta. En el modelo realizado, con uno solo alcanza, porque el consumidor seguira consumiendo indefinidamente siempre que halla stock en la casa.
+rta. Varía, porque depende de el equipo donde se ejecute, del procesador, como esté hecho el código, la cantidad de proveedores, etc.
 
 2-Bloques Synchronized, porque deben serlos?
 rta. Los bloques sincronizados y los metodos sincronizados son dos formas distintas de utulizar sincronización en java e implementar la exclusión mutuo en secciones críticas de código.La diferencia entre métodos y bloques sincronizados está en el lugar en el que la sección critica está ubicada. El bloque sincronizado bloquea solo lo que se encuentra dentro del bloque, y cuanto menos bloqueemos mejor rendimiento vamos a objetener de nuestra clase, por eso siempre es mejor bloquear únicamente la sección crítica que haya en el código. En cambio el método sincronizado bloquea el objeto actual representado por su palabra reservado o bloquea a nivel de clase, si el método sincronizado ademas es estatico. Ademoas En el caso de los métodos sincronizados, el bloqueo conseguido por el hilo cuando entra en el método y cuando se libera al salir del método, o sale normalmente o lanzando una Exception. Por el otro lado, en el caso de los bloques sincronizados, el hilo bloquea cuando entra en el bloque propiamente dicho, y libera cuando deja el bloque.
@@ -27,8 +27,4 @@ ej:
 Producer producer = new Producer('ipa,house');
 producer.start();
 
-FORMA 3:Pasarle un Runnable al constructor de Thread creando una clase anonima
-*Creamos una instancia de Thread
-*Como parametro le pasamos una instancia de Runnable y el método run de esa instancia creado en ese mismo momento donde hacermos lo que hariamos en el método run del Producer. 
-*luego llamamos al start() del Thread creado.
-
+FORMA 3: Instanciar un Thread
